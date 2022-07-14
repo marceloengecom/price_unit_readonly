@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add the field "Valor Venda Somente Leitura" on the groups form-->
+    <record id="group_price_readonly_sales" model="res.groups">
+        <field name="name">Valor Venda Somente Leitura</field>
+        <field name="category_id" ref="price_readonly.module_category_price_readonly"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Add the field "Valor Fatura Somente Leitura" on the groups form-->
+    <record id="group_price_readonly_invoice" model="res.groups">
+        <field name="name">Valor Fatura Somente Leitura</field>
+        <field name="category_id" ref="price_readonly.module_category_price_readonly"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>
